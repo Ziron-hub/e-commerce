@@ -1,0 +1,17 @@
+server:
+  http_listen_port: 9009
+
+distributor:
+  ring:
+    kvstore:
+      store: inmemory
+
+ingester:
+  lifecycler:
+    ring:
+      kvstore:
+        store: inmemory
+
+storage:
+  tsdb:
+    dir: /tmp/mimir/tsdb
